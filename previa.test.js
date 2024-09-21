@@ -1,7 +1,7 @@
 import { describe, it, expect } from "bun:test";
 import {
   maiorNumero,
-  //verificarParOuImpar,
+  verificarParOuImpar,
   //contarCaracter,
   //atualizarPropriedade,
 } from "./previa.js";
@@ -19,3 +19,15 @@ describe("maiorNumero", () => {
   });
 });
 
+// Teste para a função verificarParOuImpar
+describe("verificarParOuImpar", () => {
+  it('deve retornar "Par" para números pares', () => {
+    expect(verificarParOuImpar(4)).toBe("Par");
+  });
+  it('deve retornar "Ímpar" para números ímpares', () => {
+    expect(verificarParOuImpar(7)).toBe("Ímpar");
+  });
+  it("deve retornar null para entradas inválidas", () => {
+    expect(verificarParOuImpar("não é um número")).toBe(null);
+  });
+});
