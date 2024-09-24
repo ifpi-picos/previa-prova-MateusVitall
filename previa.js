@@ -16,6 +16,21 @@ export function verificarParOuImpar(n){
     }
 }
 
+export function contarCaracter(palavra){
+    if (typeof palavra != "string"){
+        return null}
+
+    let contar = 0
+    for (const letra of palavra) {
+        if(letra.toLocaleLowerCase() =='a'){
+            contar++
+        }
+    } return contar
+    }
+
+
+
+
 
 
 
