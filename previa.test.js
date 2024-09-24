@@ -2,7 +2,7 @@ import { describe, it, expect } from "bun:test";
 import {
   maiorNumero,
   verificarParOuImpar,
-  //contarCaracter,
+  contarCaracter,
   //atualizarPropriedade,
 } from "./previa.js";
 
@@ -29,5 +29,15 @@ describe("verificarParOuImpar", () => {
   });
   it("deve retornar null para entradas inválidas", () => {
     expect(verificarParOuImpar("não é um número")).toBe(null);
+  });
+});
+
+// Teste para a função contarCaracterA
+describe("contarCaracter", () => {
+  it("deve contar a quantidade de caracteres na string", () => {
+    expect(contarCaracter("Abracadabra", "a")).toBe(5);
+  });
+  it("deve retornar null para entradas inválidas", () => {
+    expect(contarCaracter(12345, "b")).toBe(null);
   });
 });
