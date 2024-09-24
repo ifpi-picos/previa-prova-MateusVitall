@@ -16,10 +16,7 @@ export function verificarParOuImpar(n){
     }
 }
 
-export function contarCaracterA(string){
-    while(string === "A"){}    
 
-}
 
 
 
