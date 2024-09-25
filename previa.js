@@ -20,7 +20,7 @@ export function contarCaracter(palavra){
     if (typeof palavra != "string"){
         return null}
 
-    let contar = 0
+    let contar = 0 
     for (const letra of palavra) {
         if(letra.toLocaleLowerCase() =='a'){
             contar++
@@ -28,8 +28,13 @@ export function contarCaracter(palavra){
     } return contar
     }
 
-
-
+export function atualizarPropriedade(objeto,propriedade,valor){
+   if (objeto.hasOwnProperty(propriedade)== false){
+        return null
+   }else{objeto[propriedade]=valor
+    return objeto
+   }
+}
 
 
 
